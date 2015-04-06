@@ -1,7 +1,5 @@
 package com.linedata.ekip.pos.crma.dao.crma;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -77,6 +75,7 @@ public class JdbcSaoImpl {
 		String query = "SELECT * FROM chiffrage WHERE id = ?";
 		return jdbcTemplate.queryForObject(query,new Object[]{id}, new CircleMapper());
 	}
+	
 	
 	
 	
