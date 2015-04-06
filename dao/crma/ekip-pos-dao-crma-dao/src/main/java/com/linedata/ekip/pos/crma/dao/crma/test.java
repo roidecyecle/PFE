@@ -16,7 +16,7 @@ public abstract class test {
 		
 		
 		
-	
+		System.out.println("test");
 		System.out.println(dao.getChiffrageById(1).getLibelle()+" et le nombre des chiffrages est: "+dao.getAllChiffrage().size());
 		
 		
