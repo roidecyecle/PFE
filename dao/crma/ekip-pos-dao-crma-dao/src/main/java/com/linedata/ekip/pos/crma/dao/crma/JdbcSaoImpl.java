@@ -22,7 +22,7 @@ public class JdbcSaoImpl {
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate = new JdbcTemplate(); 
 
-	public Chiffrage getChiffrage(int chiffId){
+/*	public Chiffrage getChiffrage(int chiffId){
 		
 		Connection conn = null;
 		try{
@@ -51,7 +51,7 @@ public class JdbcSaoImpl {
 			}
 		}
 	}
-	
+*/	
 
 	public DataSource getDataSource() {
 		return dataSource;
@@ -76,6 +76,13 @@ public class JdbcSaoImpl {
 	public Chiffrage getChiffrageById(int id){
 		String query = "SELECT * FROM chiffrage WHERE id = ?";
 		return jdbcTemplate.queryForObject(query,new Object[]{id}, new CircleMapper());
+	}
+	
+	
+	
+	public void insertChiffrage(Chiffrage chiff){
+		String query = "Insert INTO Chiffrage VALUES(?, ?)";
+		jdbcTemplate.update(query, new Object[]{chiff.getId(), chiff.getLibelle()});
 	}
 	
 	

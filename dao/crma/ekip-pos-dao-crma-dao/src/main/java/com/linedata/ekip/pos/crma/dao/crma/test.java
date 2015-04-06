@@ -3,6 +3,8 @@ package com.linedata.ekip.pos.crma.dao.crma;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.linedata.ekip.pos.dao.model.impl.Chiffrage;
+
 
 
 public abstract class test {
@@ -16,8 +18,8 @@ public abstract class test {
 		
 		
 		
-		System.out.println("test");
-		System.out.println(dao.getChiffrageById(1).getLibelle()+" et le nombre des chiffrages est: "+dao.getAllChiffrage().size());
+		dao.insertChiffrage(new Chiffrage(8,"chiff 8"));
+		System.out.println(dao.getChiffrageById(8).getLibelle()+" et le nombre des chiffrages est: "+dao.getAllChiffrage().size());
 		
 		
 		
