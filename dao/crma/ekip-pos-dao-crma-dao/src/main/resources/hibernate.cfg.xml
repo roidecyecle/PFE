@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- DataSource & Connection info. -->
+      
+        <property name="hibernate.connection.driver.class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@tn1orc03:1521:LDSTOOLS</property>
+        <property name="hibernate.connection.username">portal</property>
+        <property name="hibernate.connection.password">portal</property>
+        <property name="hibernate.connection.pool_size">1</property>
+        
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect </property>
+        														
+
+        <!-- General Hibernate settings. -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+
+        <!-- DDL Mode. -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- 2nd Level Cache. -->
+       
+
+        <!-- All our Hibernate mapping XML files. -->
+        <mapping class="com.linedata.ekip.pos.dao.model.impl.Chiffrage" />
+    </session-factory>
+</hibernate-configuration>
