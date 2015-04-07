@@ -18,8 +18,8 @@ public abstract class test {
 		
 		System.out.println("");
 		
-		dao.insertChiffrage(new Chiffrage(8,"chiff 8"));
-		System.out.println(dao.getChiffrageById(8).getLibelle()+" et le nombre des chiffrages est: "+dao.getAllChiffrage().size());
+		dao.insertChiffrage(new Chiffrage(9,"chiff 9"));
+		System.out.println(dao.getChiffrageById(9).getLibelle()+" et le nombre des chiffrages est: "+dao.getAllChiffrage().size());
 		
 		
 		
